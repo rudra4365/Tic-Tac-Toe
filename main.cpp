@@ -6,8 +6,8 @@ char player='X';
 
 void draw()
 {
-    //system("cmd /c cls");
-    system("clear");
+    system("cmd /c cls");
+    //system("clear");
     int i,j;
 	for(i=0;i<3;i++)
 	{
@@ -202,17 +202,17 @@ int main()
 		s=win();
 		if(s=='X')
 		{
-			cout<<"X won the game.";
+			cout<<"X won the game. ";
 			break;
 		}
 		else if(s=='Y')
 		{
-			cout<<"Y won the game.";
+			cout<<"Y won the game. ";
 			break;
 		}
 		else if(s=='N' && n==9)
 		{
-			cout<<"It's a TIE.";
+			cout<<"It's a TIE. ";
 			break;
 		}
 
