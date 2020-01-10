@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 #include<iostream>
+#include<time.h>
 using namespace std;
 char matrix[3][3]={'1','2','3','4','5','6','7','8','9'};
 char player='X';
@@ -188,7 +189,139 @@ char win()
 
 void comp()
 {
-	if(matrix[0][0]=='X' && matrix[0][1]=='X' && matrix[0][2]=='3')
+    if(matrix[0][0]=='O' && matrix[0][1]=='O' && matrix[0][2]=='3')
+	{
+		matrix[0][2]='O';
+		cout<<"O placed at field number 3";
+	}
+	else if(matrix[0][0]=='O' && matrix[0][1]=='2' && matrix[0][2]=='O')
+	{
+		matrix[0][1]='O';
+		cout<<"O placed at field number 2";
+	}
+	else if(matrix[0][0]=='1' && matrix[0][1]=='O' && matrix[0][2]=='O')
+	{
+		matrix[0][0]='O';
+		cout<<"O placed at field number 1";
+	}
+
+	else if(matrix[1][0]=='O' && matrix[1][1]=='O' && matrix[1][2]=='6')
+	{
+		matrix[1][2]='O';
+		cout<<"O placed at field number 6";
+	}
+	else if(matrix[1][0]=='O' && matrix[1][1]=='5' && matrix[1][2]=='O')
+	{
+		matrix[1][1]='O';
+		cout<<"O placed at field number 5";
+	}
+	else if(matrix[1][0]=='4' && matrix[1][1]=='O' && matrix[1][2]=='O')
+	{
+		matrix[1][0]='O';
+		cout<<"O placed at field number 4";
+	}
+
+	else if(matrix[2][0]=='O' && matrix[2][1]=='O' && matrix[2][2]=='9')
+	{
+		matrix[2][2]='O';
+		cout<<"O placed at field number 9";
+	}
+	else if(matrix[2][0]=='O' && matrix[2][1]=='8' && matrix[2][2]=='O')
+	{
+		matrix[2][1]='O';
+		cout<<"O placed at field number 8";
+	}
+	else if(matrix[2][0]=='7' && matrix[2][1]=='O' && matrix[2][2]=='O')
+	{
+		matrix[0][0]='O';
+		cout<<"O placed at field number 7";
+	}
+
+	else if(matrix[0][0]=='O' && matrix[1][0]=='O' && matrix[2][0]=='7')
+	{
+		matrix[2][0]='O';
+		cout<<"O placed at field number 7";
+	}
+	else if(matrix[0][0]=='O' && matrix[1][0]=='4' && matrix[2][0]=='O')
+	{
+		matrix[1][0]='O';
+		cout<<"O placed at field number 4";
+	}
+	else if(matrix[0][0]=='1' && matrix[1][0]=='O' && matrix[2][0]=='O')
+	{
+		matrix[0][0]='O';
+		cout<<"O placed at field number 1";
+	}
+
+	else if(matrix[0][1]=='O' && matrix[1][1]=='O' && matrix[2][1]=='8')
+	{
+		matrix[2][1]='O';
+		cout<<"O placed at field number 8";
+	}
+	else if(matrix[0][1]=='O' && matrix[1][1]=='5' && matrix[2][1]=='O')
+	{
+		matrix[1][1]='O';
+		cout<<"O placed at field number 5";
+	}
+	else if(matrix[0][1]=='2' && matrix[1][1]=='O' && matrix[2][1]=='O')
+	{
+		matrix[0][1]='O';
+		cout<<"O placed at field number 2";
+	}
+
+	else if(matrix[0][2]=='O' && matrix[1][2]=='O' && matrix[2][2]=='9')
+	{
+		matrix[2][2]='O';
+		cout<<"O placed at field number 9";
+	}
+	else if(matrix[0][2]=='O' && matrix[1][2]=='6' && matrix[2][2]=='O')
+	{
+		matrix[1][2]='O';
+		cout<<"O placed at field number 6";
+	}
+	else if(matrix[0][2]=='3' && matrix[1][2]=='O' && matrix[2][2]=='O')
+	{
+		matrix[0][2]='O';
+		cout<<"O placed at field number 3";
+	}
+
+
+
+	else if(matrix[0][0]=='O' && matrix[1][1]=='O' && matrix[2][2]=='9')
+	{
+		matrix[2][2]='O';
+		cout<<"O placed at field number 9";
+	}
+	else if(matrix[0][0]=='O' && matrix[1][1]=='5' && matrix[2][2]=='O')
+	{
+		matrix[1][1]='O';
+		cout<<"O placed at field number 5";
+	}
+	else if(matrix[0][0]=='1' && matrix[1][1]=='O' && matrix[2][2]=='O')
+	{
+		matrix[0][0]='O';
+		cout<<"O placed at field number 1";
+	}
+
+	else if(matrix[0][2]=='O' && matrix[1][1]=='O' && matrix[2][0]=='7')
+	{
+		matrix[2][0]='O';
+		cout<<"O placed at field number 7";
+	}
+	else if(matrix[0][2]=='O' && matrix[1][1]=='5' && matrix[2][0]=='O')
+	{
+		matrix[1][1]='O';
+		cout<<"O placed at field number 5";
+	}
+	else if(matrix[0][2]=='3' && matrix[1][1]=='O' && matrix[2][0]=='O')
+	{
+		matrix[0][2]='O';
+		cout<<"O placed at field number 3";
+	}
+	// added above for two comp fields
+
+
+	else if(matrix[0][0]=='X' && matrix[0][1]=='X' && matrix[0][2]=='3')
 	{
 		matrix[0][2]='O';
 		cout<<"O placed at field number 3";
@@ -320,138 +453,86 @@ void comp()
 
 	//above done for 2 X's game
 
-	else if(matrix[0][0]=='O' && matrix[0][1]=='O' && matrix[0][2]=='3')
-	{
-		matrix[0][2]='O';
-		cout<<"O placed at field number 3";
-	}
-	else if(matrix[0][0]=='O' && matrix[0][1]=='2' && matrix[0][2]=='O')
-	{
-		matrix[0][1]='O';
-		cout<<"O placed at field number 2";
-	}
-	else if(matrix[0][0]=='1' && matrix[0][1]=='O' && matrix[0][2]=='O')
-	{
-		matrix[0][0]='O';
-		cout<<"O placed at field number 1";
-	}
 
-	else if(matrix[1][0]=='O' && matrix[1][1]=='O' && matrix[1][2]=='6')
-	{
-		matrix[1][2]='O';
-		cout<<"O placed at field number 6";
-	}
-	else if(matrix[1][0]=='O' && matrix[1][1]=='5' && matrix[1][2]=='O')
-	{
-		matrix[1][1]='O';
-		cout<<"O placed at field number 5";
-	}
-	else if(matrix[1][0]=='4' && matrix[1][1]=='O' && matrix[1][2]=='O')
-	{
-		matrix[1][0]='O';
-		cout<<"O placed at field number 4";
-	}
 
-	else if(matrix[2][0]=='O' && matrix[2][1]=='O' && matrix[2][2]=='9')
+	else
 	{
-		matrix[2][2]='O';
-		cout<<"O placed at field number 9";
-	}
-	else if(matrix[2][0]=='O' && matrix[2][1]=='8' && matrix[2][2]=='O')
-	{
-		matrix[2][1]='O';
-		cout<<"O placed at field number 8";
-	}
-	else if(matrix[2][0]=='7' && matrix[2][1]=='O' && matrix[2][2]=='O')
-	{
-		matrix[0][0]='O';
-		cout<<"O placed at field number 7";
-	}
+		srand(time(0));
+		int r=rand()%10;
+		if(r==0)
+			r++;
+		switch(r)
+		{
+			case 1: if(matrix[0][0]=='1')
+						{matrix[0][0]='O';
+						cout<<"O placed at field number 1";}
+					else
+						comp();
+					break;
 
-	else if(matrix[0][0]=='O' && matrix[1][0]=='O' && matrix[2][0]=='7')
-	{
-		matrix[2][0]='O';
-		cout<<"O placed at field number 7";
-	}
-	else if(matrix[0][0]=='O' && matrix[1][0]=='4' && matrix[2][0]=='O')
-	{
-		matrix[1][0]='O';
-		cout<<"O placed at field number 4";
-	}
-	else if(matrix[0][0]=='1' && matrix[1][0]=='O' && matrix[2][0]=='O')
-	{
-		matrix[0][0]='O';
-		cout<<"O placed at field number 1";
-	}
+			case 2: if(matrix[0][1]=='2')
+						{matrix[0][1]='O';
+						cout<<"O placed at field number 2";}
+					else
+						comp();
+					break;
+			case 3: if(matrix[0][2]=='3')
+						{matrix[0][2]='O';
+						cout<<"O placed at field number 3";}
+					else
+						comp();
+					break;
 
-	else if(matrix[0][1]=='O' && matrix[1][1]=='O' && matrix[2][1]=='8')
-	{
-		matrix[2][1]='O';
-		cout<<"O placed at field number 8";
-	}
-	else if(matrix[0][1]=='O' && matrix[1][1]=='5' && matrix[2][1]=='O')
-	{
-		matrix[1][1]='O';
-		cout<<"O placed at field number 5";
-	}
-	else if(matrix[0][1]=='2' && matrix[1][1]=='O' && matrix[2][1]=='O')
-	{
-		matrix[0][1]='O';
-		cout<<"O placed at field number 2";
-	}
+			case 4: if(matrix[1][0]=='4')
+						{matrix[1][0]='O';
+						cout<<"O placed at field number 4";}
+					else
+						comp();
+					break;
 
-	else if(matrix[0][2]=='O' && matrix[1][2]=='O' && matrix[2][2]=='9')
-	{
-		matrix[2][2]='O';
-		cout<<"O placed at field number 9";
-	}
-	else if(matrix[0][2]=='O' && matrix[1][2]=='6' && matrix[2][2]=='O')
-	{
-		matrix[1][2]='O';
-		cout<<"O placed at field number 6";
-	}
-	else if(matrix[0][2]=='3' && matrix[1][2]=='O' && matrix[2][2]=='O')
-	{
-		matrix[0][2]='O';
-		cout<<"O placed at field number 3";
-	}
+			case 5: if(matrix[1][1]=='5')
+						{matrix[1][1]='O';
+						cout<<"O placed at field number 5";}
+					else
+						comp();
+					break;
+
+			case 6: if(matrix[1][2]=='6')
+						{matrix[1][2]='O';
+						cout<<"O placed at field number 6";}
+					else
+						comp();
+					break;
+
+			case 7: if(matrix[2][0]=='7')
+						{matrix[2][0]='O';
+						cout<<"O placed at field number 7";}
+					else
+						comp();
+					break;
+
+			case 8: if(matrix[2][1]=='8')
+						{matrix[2][1]='O';
+						cout<<"O placed at field number 8";}
+					else
+						comp();
+					break;
+
+			case 9: if(matrix[2][2]=='9')
+						{matrix[2][2]='O';
+						cout<<"O placed at field number 9";}
+					else
+						comp();
+					break;
 
 
 
-	else if(matrix[0][0]=='O' && matrix[1][1]=='O' && matrix[2][2]=='9')
-	{
-		matrix[2][2]='O';
-		cout<<"O placed at field number 9";
-	}
-	else if(matrix[0][0]=='O' && matrix[1][1]=='5' && matrix[2][2]=='O')
-	{
-		matrix[1][1]='O';
-		cout<<"O placed at field number 5";
-	}
-	else if(matrix[0][0]=='1' && matrix[1][1]=='O' && matrix[2][2]=='O')
-	{
-		matrix[0][0]='O';
-		cout<<"O placed at field number 1";
-	}
 
-	else if(matrix[0][2]=='O' && matrix[1][1]=='O' && matrix[2][0]=='7')
-	{
-		matrix[2][0]='O';
-		cout<<"O placed at field number 7";
-	}
-	else if(matrix[0][2]=='O' && matrix[1][1]=='5' && matrix[2][0]=='O')
-	{
-		matrix[1][1]='O';
-		cout<<"O placed at field number 5";
-	}
-	else if(matrix[0][2]=='3' && matrix[1][1]=='O' && matrix[2][0]=='O')
-	{
-		matrix[0][2]='O';
-		cout<<"O placed at field number 3";
-	}
-	// added above for two comp fields
 
-	
+
+		}
+
+	}
 
 
 }
@@ -467,9 +548,30 @@ int main()
 		n++;
 		input();
 		draw();
+
+		s=win();
+		if(s=='X')
+		{
+			cout<<"X won the game. ";
+			break;
+		}
+		else if(s=='Y')
+		{
+			cout<<"Y won the game. ";
+			break;
+		}
+		else if(s=='N' && n==9)
+		{
+			cout<<"It's a TIE. ";
+			break;
+		}
+
+
 		comp();
 		draw();
-		
+		system("pause");
+
+
 		s=win();
 		if(s=='X')
 		{
