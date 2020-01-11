@@ -233,7 +233,7 @@ void comp()
 	}
 	else if(matrix[2][0]=='7' && matrix[2][1]=='O' && matrix[2][2]=='O')
 	{
-		matrix[0][0]='O';
+		matrix[2][0]='O';
 		cout<<"O placed at field number 7";
 	}
 
@@ -365,7 +365,7 @@ void comp()
 	}
 	else if(matrix[2][0]=='7' && matrix[2][1]=='X' && matrix[2][2]=='X')
 	{
-		matrix[0][0]='O';
+		matrix[2][0]='O';
 		cout<<"O placed at field number 7";
 	}
 
@@ -545,8 +545,9 @@ int main()
 	draw();
 	while(1)
 	{
-		n++;
+
 		input();
+		n++;
 		draw();
 
 		s=win();
@@ -555,9 +556,9 @@ int main()
 			cout<<"X won the game. ";
 			break;
 		}
-		else if(s=='Y')
+		else if(s=='O')
 		{
-			cout<<"Y won the game. ";
+			cout<<"O won the game. ";
 			break;
 		}
 		else if(s=='N' && n==9)
@@ -568,8 +569,9 @@ int main()
 
 
 		comp();
+        n++;
 		draw();
-		system("pause");
+
 
 
 		s=win();
@@ -578,9 +580,9 @@ int main()
 			cout<<"X won the game. ";
 			break;
 		}
-		else if(s=='Y')
+		else if(s=='O')
 		{
-			cout<<"Y won the game. ";
+			cout<<"O won the game. ";
 			break;
 		}
 		else if(s=='N' && n==9)
