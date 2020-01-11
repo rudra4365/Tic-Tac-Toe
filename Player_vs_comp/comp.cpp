@@ -534,6 +534,8 @@ void comp()
 
 	}
 
+		system("pause");
+
 
 }
 
